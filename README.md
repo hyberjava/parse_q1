@@ -11,5 +11,5 @@ parse.py common-columns.txt
 
 >задание*:<br>
 >Цель: в процессе исследования сети некоторой ﻿компании вы наткнулись на ссылку:
->http://enter.seclab.stepic.org/getdata.php?req=bmFtZSxhZ2UK
+>http://enter.seclab.stepic.org/getdata.php?req=bmFtZSxhZ2UK<br>
 >Ваша задача: попробуйте получить пароль пользователя admin.
