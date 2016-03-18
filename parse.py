@@ -25,7 +25,7 @@ if len(sys.argv) < 2:
     exit(1)
 
 if not os.path.exists(sys.argv[1]):
-    print(sys.argv[0] + " file not found")
+    print(sys.argv[1] + " file not found")
     exit(1)
 
 blank = "1:<br>2:<br>3:<br>4:<br>5:<br>"
