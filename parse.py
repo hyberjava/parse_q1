@@ -25,12 +25,7 @@ if len(sys.argv) < 2:
     exit("use parse.py filename")
 
 if not os.path.exists(sys.argv[1]):
-<<<<<<< HEAD
     exit(sys.argv[1] + " file not found")
-=======
-    print(sys.argv[1] + " file not found")
-    exit(1)
->>>>>>> 4ac55a6254805f040adc911410346e791b0f5d6d
 
 blank = "1:<br>2:<br>3:<br>4:<br>5:<br>"
 blank_len = len(blank)
