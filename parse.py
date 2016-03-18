@@ -20,32 +20,30 @@ def check_for_result(string, len_blank):
     else:
         return True
 
+
 if len(sys.argv) < 2:
-    print("use parse.py filename")
-    exit(1)
+    exit("use parse.py filename")
 
 if not os.path.exists(sys.argv[1]):
-    print(sys.argv[0] + " file not found")
-    exit(1)
+    exit(sys.argv[1] + " file not found")
 
 blank = "1:<br>2:<br>3:<br>4:<br>5:<br>"
 blank_len = len(blank)
 
 
 with open(sys.argv[1], "r") as dict:
-    for item in dict:
-        item = item.rstrip()
-        resp = get_resp_by(item)
+    for word in dict:
+        word = word.rstrip()
+        resp = get_resp_by(word)
         if resp:
             check = check_for_result(resp, blank_len)
             if check:
                 out = resp.replace("<br>", " ")
                 print(out)
                 result_file = open('parsepy_out.txt', 'a')
-                result_file.write("key: " + item + " \t" + out + "\n")
+                result_file.write("key: " + word + " \t" + out + "\n")
                 result_file.close()
             else:
-                print(item + " : False")
+                print(word + " : False")
         else:
-            print("Alert! error on key " + item + ", script stopped")
-            exit(1)
+            exit("Alert! error on key " + word + ", script stopped")
