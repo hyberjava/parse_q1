@@ -36,8 +36,7 @@ with open(sys.argv[1], "r") as dict:
         word = word.rstrip()
         resp = get_resp_by(word)
         if resp:
-            check = check_for_result(resp, blank_len)
-            if check:
+            if check_for_result(resp, blank_len):
                 out = resp.replace("<br>", " ")
                 print(out)
                 result_file = open('parsepy_out.txt', 'a')
